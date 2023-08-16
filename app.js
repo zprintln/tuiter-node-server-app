@@ -6,6 +6,12 @@ import TuitsController from "./controllers/tuits/tuits-controller.js";
 import AuthController from "./users/auth-controller.js";
 import cors from 'cors';        //import Cross Origin Resource Sharing library
 import "dotenv/config";        //import dotenv library to read .env file
+import mongoose from "mongoose"; //import mongoose library to connect to MongoDB
+
+//connect to MongoDB
+const CONNECTION_STRING = process.env.DB_CONNECTION_STRING || 'mongodb://127.0.0.1:27017/tuiter';
+mongoose.connect(CONNECTION_STRING);
+
 
 
 const app = express();
