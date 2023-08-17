@@ -4,8 +4,8 @@ import * as tuitsDao from './tuits-dao.js'
 const createTuit = async (req, res) => {
     const newTuit = req.body;                          // retrieve data from HTTP body
     
-    newTuit.likes = 0;                                 // initialize likes counter to 0
-    newTuit.liked = false;                             // initialize liked flag to false
+    newTuit.likes = 1;                                 // initialize likes counter to 0
+    newTuit.liked = true;                             // initialize liked flag to false
     newTuit.replies = 0;                               // initialize replies counter to 0
     newTuit.retuits = 0;                               // initialize retuits counter to 0
     newTuit.time = "0s";                               // initialize time counter to 0

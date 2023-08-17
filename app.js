@@ -9,9 +9,9 @@ import "dotenv/config";        //import dotenv library to read .env file
 import mongoose from "mongoose"; //import mongoose library to connect to MongoDB
 
 //connect to MongoDB
-const CONNECTION_STRING = process.env.DB_CONNECTION_STRING || 'mongodb://127.0.0.1:27017/tuiter';
+const CONNECTION_STRING = process.env.DB_CONNECTION_STRING;
+// || 'mongodb://127.0.0.1:27017/tuiter'; 
 mongoose.connect(CONNECTION_STRING);
-
 
 
 const app = express();
