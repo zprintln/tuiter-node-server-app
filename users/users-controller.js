@@ -1,4 +1,3 @@
-import people from './users.js'
 import * as usersDao from "./users-dao.js";
 
 
@@ -9,6 +8,7 @@ const UserController = (app) => {
    app.delete('/api/users/:uid', deleteUser);  
    app.put('/api/users/:uid', updateUser); 
 }
+
 const findAllUsers = async (req, res) => {
    const username = req.query.username;
    const password = req.query.password;
